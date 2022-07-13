@@ -6,4 +6,11 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <PackageId>ZHUSMELB.MyGhaPackage</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Yu Zhu</Authors>
+    <Company>ZHUSMELB</Company>
+  </PropertyGroup>
+
 </Project>
