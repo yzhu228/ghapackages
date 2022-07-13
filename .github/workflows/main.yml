@@ -27,6 +27,8 @@ jobs:
         with:
           name: nuget-packages
           path: ./outputs/ZHUSMELB.MyGhaPackage.1.0.0.nupkg
+      - name: Push to GitHub Packages
+        run: dotnet nuget push "outputs/ZHUSMELB.MyGhaPackage.1.0.0.nupkg"
 
 
 
