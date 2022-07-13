@@ -1,0 +1,26 @@
+name: Deploy my nuget package
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+      - name: Setup dotnet core
+        uses: actions/setup-dotnet@v2
+        with:
+          dotnet-version: 6.0.x
+          source-url: https://nuget.pkg.github.com/yzhu228/index.json
+        env:
+          NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      - name: Build dotnet nuget package
+        run: dotnet build -c Release
+      - name: Pack nuget package
+        run: dotnet pack --no-build -c Release -o ./outputs/
+
+
