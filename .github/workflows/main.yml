@@ -22,5 +22,11 @@ jobs:
         run: dotnet build -c Release
       - name: Pack nuget package
         run: dotnet pack --no-build -c Release -o ./outputs/
+      - name: Archieve artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: nuget-packages
+          path: ./outputs/ZHUSMELB.MyGhaPackage.1.0.0.nupkg
+
 
 
