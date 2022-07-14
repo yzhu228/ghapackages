@@ -28,7 +28,7 @@ jobs:
           name: nuget-packages
           path: ./outputs/ZHUSMELB.MyGhaPackage.1.0.0.nupkg
       - name: Push to GitHub Packages
-        run: dotnet nuget push -k ${{secrets.GITHUB_TOKEN}} "outputs/*.nupkg"
+        run: dotnet nuget push -k ${{secrets.GITHUB_TOKEN}} --skip-duplicate "outputs/*.nupkg"
 
 
 
