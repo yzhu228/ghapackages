@@ -11,6 +11,8 @@
     <Version>1.0.0</Version>
     <Authors>Yu Zhu</Authors>
     <Company>ZHUSMELB</Company>
+    <RepositoryUrl>https://github.com/yzhu228/ghapackages.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
   </PropertyGroup>
 
 </Project>
